@@ -43,9 +43,6 @@ def run_tests():
     test_car = Car(fuel=10)
     assert test_car.fuel == 10
 
-
-run_tests()
-
 # TODO: 3. Uncomment the following line and run the doctests
 # (PyCharm may see your >>> doctest comments and run doctests anyway.)
 # doctest.testmod()
@@ -62,3 +59,21 @@ run_tests()
 # and one more you decide (one that is valid!)
 # test this and watch the tests fail
 # then write the body of the function so that the tests pass
+
+
+def phrase_to_sentence(phrase):
+    """
+    >>>phrase_to_sentence('hello')
+    'Hello.'
+    >>>phrase_to_sentence('It is an ex parrot.')
+    'It is an ex parrot.'
+    >>>phrase_to_sentence('Thank you')
+    'Thank you.'
+    """
+    sentence = phrase.capitalize()
+    if sentence[-1] != '.':
+        sentence += '.'
+    return sentence
+
+
+run_tests()
